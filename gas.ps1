@@ -1,0 +1,1 @@
+Write-Output $([math]::ceiling($([uint64]$((ConvertFrom-Json $(Invoke-WebRequest -URI https://cloudflare-eth.com -Method Post -Body $('{"jsonrpc":"2.0","method":"eth_gasPrice","params":[],"id":"'+$(Get-Random)+'"}')).Content).result)/1000000000)))
