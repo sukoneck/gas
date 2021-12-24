@@ -39,7 +39,7 @@ Create an environment variable that calls a script.
     Set-ItemProperty -Path 'Registry::HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\Environment' -Name PATH -Value $((Get-ItemProperty -Path 'Registry::HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\Environment' -Name PATH).path + ";" + $Path)
     ``` 
 
-3. Now you can get the current gas price anytime by using `gas` 
+3. Now you can get the current gas price anytime by using `gas` or use `gassy` to get a constant drip of current price. 
 
 `NOTE: This has only been tested on Win10. `
 
